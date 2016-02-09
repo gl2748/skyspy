@@ -19,6 +19,8 @@ function showInfo(data, tabletop) {
   var client = sbs1.createClient();
     client.on('message', function(msg) {
       if (msg.message_type === sbs1.MessageType.TRANSMISSION && msg.transmission_type === sbs1.TransmissionType.ES_AIRBORNE_POS) {
+        
+        /*
         console.log('transmission_type: ' + msg.transmission_type);
         console.log('session id: ' + msg.session_id);
         console.log('aircraft id: ' + msg.aircraft_id);
@@ -28,6 +30,7 @@ function showInfo(data, tabletop) {
         console.log('flight: ' + msg.callsign);
         console.log('squawk: ' + msg.squawk);
         console.log('altitude: ' + msg.altitude);
+        */
 
         var hex_id = msg.hex_ident;
 
